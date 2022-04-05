@@ -1,0 +1,8 @@
+numpy==1.19.1
+spacy-transformers
+flask-restplus==0.13.0
+joblib==0.17.0
+Werkzeug==0.16.1
+kserve
+
+
