@@ -28,5 +28,5 @@ jobs:
           builder: 'heroku/buildpacks:20'
       - name: tag and push to nexus
         run: |
-          docker tag model-functions/${{ steps.extract_branch.outputs.branch }}:latest nexus.digitaldots.ai:9082/digitaldots/model-functions/${{ steps.extract_branch.outputs.branch }}:latest
-          docker push nexus.digitaldots.ai:9082/digitaldots/model-functions/${{ steps.extract_branch.outputs.branch }}:latest
+          docker tag model-functions/${{ steps.extract_branch.outputs.branch }}:latest nexus.digitaldots.ai:9082/model-functions/${{ steps.extract_branch.outputs.branch }}:latest
+          docker push nexus.digitaldots.ai:9082/model-functions/${{ steps.extract_branch.outputs.branch }}:latest
