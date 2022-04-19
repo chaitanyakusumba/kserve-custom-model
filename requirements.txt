@@ -1,8 +1,11 @@
 numpy==1.19.1
+spacy
 spacy-transformers
 flask-restplus==0.13.0
+# flask_restx
 joblib==0.17.0
 Werkzeug==0.16.1
 kserve
+markupsafe==2.0.1
 
 

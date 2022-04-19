@@ -22,11 +22,11 @@ jobs:
       - name: Build image
         uses: mamezou-tech/buildpacks-action@master
         with:
-          image: 'kserve-models/${{ steps.extract_branch.outputs.branch }}'
+          image: 'model-functions/${{ steps.extract_branch.outputs.branch }}'
           tag: latest
           path: ./
           builder: 'heroku/buildpacks:20'
       - name: tag and push to nexus
         run: |
-          docker tag kserve-models/${{ steps.extract_branch.outputs.branch }}:latest nexus.digitaldots.ai:9082/digitaldots/kserve-models/${{ steps.extract_branch.outputs.branch }}:latest
-          docker push nexus.digitaldots.ai:9082/digitaldots/kserve-models/${{ steps.extract_branch.outputs.branch }}:latest
+          docker tag model-functions/${{ steps.extract_branch.outputs.branch }}:latest nexus.digitaldots.ai:9082/digitaldots/model-functions/${{ steps.extract_branch.outputs.branch }}:latest
+          docker push nexus.digitaldots.ai:9082/digitaldots/model-functions/${{ steps.extract_branch.outputs.branch }}:latest
